@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lan="pt" and dir="Itr">
+<link rel="stylesheet" type="text/css" href="style.css">
+
+<head>
+  <meta charset="utf-8">
+  <title> Dragon Ball RPG </title>
+</head>
+
+<body>
+  <section>
+    <div class="Background">
+      <img src="Images\background.gif" />
+
+    </div>
+    <div id="container">
+    </div>
+    <div class="filter">
+      <img src="Images\filter.png" />
+    </div>
+    <div class="Logo">
+      <center><img src="Images\logo.png" /></center>
+    </div>
+    <div class="LoginPanel">
+      <div class="lcontainer">
+        <center>
+          <form class="box" action="home.html">
+
+            <h1>LOGIN</h1>
+            <label for="username">Usuário</label><br>
+            <input class="userfield" type="text" id="username" name="" placeholder="Usuário"><br>
+            <label for="room">Senha</label><br>
+            <input class="passwordfield" type="room" id="room" name="" placeholder="Senha" id="senha"><br>
+            <input type="submit" name="" value="Entrar">
+          </form><br><br>
+          Registrar |
+          Esqueci a senha
+        </center>
+      </div>
+    </div>
+  </section>
+  <script type="text/javascript">
+    let bg = document.getElementById('container');
+    let count = 20;
+    for (let i = 0; i < count; i++) {
+      let glitchBox = document.createElement('div')
+      glitchBox.className = 'squares';
+      bg.appendChild(glitchBox);
+    }
+    setInterval(function() {
+      let glitch = document.getElementsByClassName('squares');
+      for (let i = 0; i < glitch.length; i++) {
+        glitch[i].style.left =Math.floor(Math.random() * 100) + 'vw';
+        glitch[i].style.top = Math.floor(Math.random() * 100) + 'vh';
+        glitch[i].style.width = Math.floor(Math.random() * 400) + 'px';
+        glitch[i].style.height = Math.floor(Math.random() * 70) + 'px';
+        glitch[i].style.backgroundPosition = 0 + 'px';
+      }
+    }, 150)
+  </script>
+</body>
